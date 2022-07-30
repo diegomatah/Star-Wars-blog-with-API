@@ -1,3 +1,82 @@
 /* 
     General Styles
 */
+body{
+    background-image: url("https://www.pixel-creation.com/wp-content/uploads/star-wars-stars-background-8-background-check-all.jpg") ;
+    width: 100%;
+    height: 100%;
+    background-size: auto;
+}
+.navbar{
+    margin-bottom: 20px;
+    background-color: whitesmoke;
+    justify-content: space-around;
+    font-family: 'Pathway Gothic One', sans-serif;
+    width: 100%;
+}
+.logo{
+    width: 250px;
+    height: 100px;
+}
+.navbar-brand{
+    margin-left: 30px;
+}
+.button1 {
+    font-size: 25px;
+    color:#000000;
+    background-color: #FFE81F ;
+    border-radius: 20px;
+}
+.casco {
+    margin-right: 10px;
+}
+.button2 {
+    font-size: 20px;
+    color:#000000;
+    background-color: #FFE81F ;
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-bottom: 10px;
+    font-family: 'Pathway Gothic One', sans-serif;
+ 
+}
+.nave {
+    margin-right: 10px;
+}
+.planeta {
+    margin-right: 10px;
+}
+.background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+.secundario{
+    padding: 70px;
+}
+.footer{
+    font-size: 25px;
+    background-color: whitesmoke;
+    font-family: 'Pathway Gothic One', sans-serif;
+    width: 100%;
+}
+.info{
+    font-size: 25px;
+    background-color: whitesmoke;
+    font-family: 'Pathway Gothic One', sans-serif;
+    width: 30%;
+    border-radius: 10px;
+}
+.titulo{
+    font-size: 25px;
+    background-color: #FFE81F;
+    font-family: 'Pathway Gothic One', sans-serif;
+    width: 30%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+

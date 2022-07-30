@@ -1,17 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import darth from "../../img/darth.png";
+import starwarslogo from "../../img/starwarslogo.png";
+import casco from "../../img/casco.png";
+import planeta from "../../img/planeta.png";
+import nave from "../../img/nave.png";
 
 export const Navbar = () => {
-	return (
-		<nav className="navbar navbar-light bg-light mb-3">
-			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-			</Link>
-			<div className="ml-auto">
-				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
-				</Link>
-			</div>
-		</nav>
-	);
+  return (
+    <nav className="navbar">
+      <Link to="/">
+        <span className="navbar-brand">
+          <img src={darth}/>
+        </span>
+      </Link>
+      <img className="logo" src={starwarslogo} />
+      <Link to="/demo">
+        <img className="casco" src={casco}/>
+        <button className="button1">Personajes</button>
+      </Link>
+      <Link to="/demo">
+        <img className="planeta" src={planeta}/>
+        <button className="button1">Planetas</button>
+      </Link>
+      <Link to="/demo">
+        <img className="nave" src={nave}/>
+        <button className="button1">Naves</button>
+      </Link>
+    </nav>
+  );
 };
