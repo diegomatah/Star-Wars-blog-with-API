@@ -66,13 +66,14 @@ body{
     background-color: whitesmoke;
     font-family: 'Pathway Gothic One', sans-serif;
     width: 30%;
+    height: 100%;
     border-radius: 10px;
 }
 .titulo{
     font-size: 25px;
     background-color: #FFE81F;
     font-family: 'Pathway Gothic One', sans-serif;
-    width: 30%;
+    width: 40%;
     border-radius: 10px;
     display: flex;
     justify-content: center;

@@ -16,19 +16,20 @@ export const Personaje1 = () => {
             .then(result =>setDatos(result))
             .catch(error => console.log('error', error));
     },[])
+    console.log(datos);
   return (
     <div className="info">
       <h1>Character details: {params.idpersonaje} </h1>
       <ul>
-        <li>Name:</li>
-        <li>Description:</li>
-        <li>Gender:</li>
-        <li>Birth year:</li>
-        <li>Height:</li>
-        <li>Mass:</li>
-        <li>Hair color:</li>
-        <li>Eyes color:</li>
-        <li>Skin color:</li>
+        <li>Name: {datos.result?.properties.name}</li>
+        <li>Description: {datos.result?.description}</li>
+        <li>Gender: {datos.result?.properties.gender}</li>
+        <li>Birth year: {datos.result?.properties.birth_year}</li>
+        <li>Height: {datos.result?.properties.height}</li>
+        <li>Mass: {datos.result?.properties.mass}</li>
+        <li>Hair color: {datos.result?.properties.hair_color}</li>
+        <li>Eyes color: {datos.result?.properties.eye_color}</li>
+        <li>Skin color: {datos.result?.properties.skin_color}</li>
       </ul>
     </div>
   );

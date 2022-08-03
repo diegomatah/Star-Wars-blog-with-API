@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import { Context } from "../store/appContext";
 
@@ -7,37 +7,29 @@ import "../../styles/demo.css";
 
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
+	
+  const params = useParams ();
 
 	return (
-		<div className="container">
-			<ul className="list-group">
-				{store.demo.map((item, index) => {
-					return (
-						<li
-							key={index}
-							className="list-group-item d-flex justify-content-between"
-							style={{ background: item.background }}>
-							<Link to={"/single/" + index}>
-								<span>Link to: {item.title}</span>
-							</Link>
-							{// Conditional render example
-							// Check to see if the background is orange, if so, display the message
-							item.background === "orange" ? (
-								<p style={{ color: item.initial }}>
-									Check store/flux.js scroll to the actions to see the code
-								</p>
-							) : null}
-							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
-							</button>
-						</li>
-					);
-				})}
-			</ul>
-			<br />
-			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
-			</Link>
+		<div className="planeta">
+			<div className="titulo"><h1>Try not. Do or do not. There is no try....</h1></div> 
+      <div className="secundario row d-flex justify-content-evenly row-cols-1 row-cols-md-3 g-4">
+        {store.planets.map((e, i) => {
+          return (
+            <div className="card" style={{width:"18rem"}}>
+              <img
+                className="card-img-top img-fluid h-5 p-3"
+                alt="Card image cap"
+                src={"https://starwars-visualguide.com/assets/img/planets/"+ params.idplanet+ ".jpg"}
+              />
+              <div className="card-body d-flex justify-content-start align-items-end">
+                <h5 className="card-title">{e.name}</h5>
+                <Link to={"/demo/"+e.uid}><button className="button2">More</button></Link>
+              </div>
+            </div>
+          );
+        })}
+      </div>
 		</div>
 	);
 };

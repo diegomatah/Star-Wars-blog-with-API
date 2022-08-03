@@ -2,6 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			people:[],
+			planets:[],
+			
 
 			demo: [
 				{
@@ -22,6 +24,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			.then(res=>res.json())
 			.then(info=>setStore(({people:info.results})))
 			.catch(error=>console.log("DANGER DANGER",error))
+			},
+			getPlanets: ()=>{
+				fetch("https://www.swapi.tech/api/planets")
+				.then(res=>res.json())
+				.then(info=>setStore(({planets:info.results})))
+				.catch(error=>console.log("DANGER DANGER",error))
 			},
 
 

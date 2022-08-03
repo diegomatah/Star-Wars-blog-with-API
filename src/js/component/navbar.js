@@ -15,17 +15,17 @@ export const Navbar = () => {
         </span>
       </Link>
       <img className="logo" src={starwarslogo} />
-      <Link to="/demo">
+      <Link to="/">
         <img className="casco" src={casco}/>
-        <button className="button1">Personajes</button>
+        <button className="button1">Characters</button>
       </Link>
       <Link to="/demo">
         <img className="planeta" src={planeta}/>
-        <button className="button1">Planetas</button>
+        <button className="button1">Planets</button>
       </Link>
       <Link to="/demo">
         <img className="nave" src={nave}/>
-        <button className="button1">Naves</button>
+        <button className="button1">Vehicles</button>
       </Link>
     </nav>
   );
