@@ -20,7 +20,7 @@ export const Demo = () => {
               <img
                 className="card-img-top img-fluid h-5 p-3"
                 alt="Card image cap"
-                src={"https://starwars-visualguide.com/assets/img/planets/"+ params.idplanet+ ".jpg"}
+                src={"https://starwars-visualguide.com/assets/img/planets/"+ e.uid+ ".jpg"}
               />
               <div className="card-body d-flex justify-content-start align-items-end">
                 <h5 className="card-title">{e.name}</h5>
