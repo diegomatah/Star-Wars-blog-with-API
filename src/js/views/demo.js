@@ -13,7 +13,7 @@ export const Demo = () => {
 	return (
 		<div className="planeta">
 			<div className="titulo container"><h1>"Try not. Do or do not. There is no try"</h1></div> 
-      <div className="secundario row d-flex justify-content-start row-cols-1 row-cols-md-3 g-4">
+      <div className="secundario row row-cols-1 row-cols-md-3 g-4">
         {store.planets.map((e, i) => {
           return (
             <div className="card" style={{width:"18rem"}}>
@@ -25,6 +25,9 @@ export const Demo = () => {
               <div className="card-body d-flex justify-content-around align-items-end">
                 <h5 className="card-title">{e.name}</h5>
                 <Link to={"/demo/"+e.uid}><button className="button2">More</button></Link>
+                <button className="button2" onClick={()=>{
+                  actions.addFav(e.name)
+                }}>🤍</button>
               </div>
             </div>
           );

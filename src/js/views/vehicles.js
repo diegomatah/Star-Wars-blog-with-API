@@ -22,9 +22,12 @@ export const Vehicles = () => {
                 alt="Card image cap"
                 src={"https://starwars-visualguide.com/assets/img/vehicles/"+ e.uid+ ".jpg"}
               />
-              <div className="card-body d-flex justify-content-start align-items-end">
+              <div className="card-body d-flex justify-content-around align-items-end">
                 <h5 className="card-title">{e.name}</h5>
                 <Link to={"/vehicles/"+e.uid}><button className="button2">More</button></Link>
+                <button className="button2" onClick={()=>{
+                  actions.addFav(e.name)
+                }}>🤍</button>
               </div>
             </div>
           );
