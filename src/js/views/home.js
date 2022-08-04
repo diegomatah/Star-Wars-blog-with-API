@@ -17,11 +17,11 @@ import { Context } from "../store/appContext";
 export const Home = () => {
   const params = useParams ();
   const { store, actions } = useContext(Context);
-  let fotos = [lukesky,c3po,r2d,darthvader,leia,owen,beru,r5d4,biggs,obiwan];
+  //let fotos = [lukesky,c3po,r2d,darthvader,leia,owen,beru,r5d4,biggs,obiwan]; OTRA FORMA DE INSERTAR FOTOS DEL ARCHIVO IMG
 
   return (
     <div className="principal">
-      <div className="titulo"><h1>May the force be with you...</h1></div> 
+      <div className="titulo container"><h1>"May the force be with you"</h1></div> 
       <div className="secundario row d-flex justify-content-evenly row-cols-1 row-cols-md-3 g-4">
         {store.people.map((e, i) => {
           return (
@@ -29,7 +29,7 @@ export const Home = () => {
               <img
                 className="card-img-top img-fluid h-5 p-3"
                 alt="Card image cap"
-                src={fotos[i]}
+                src={"https://starwars-visualguide.com/assets/img/characters/"+ e.uid+ ".jpg"}
               />
               <div className="card-body d-flex justify-content-start align-items-end">
                 <h5 className="card-title">{e.name}</h5>

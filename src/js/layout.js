@@ -5,12 +5,14 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import { Vehicles } from "./views/vehicles";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { Personaje1 } from "./component/personaje1";
 import { Planets } from "./component/planets";
+import { Vehicles1 } from "./component/vehicles1";
 
 //create your first component
 const Layout = () => {
@@ -32,6 +34,12 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/demo/:idplanet">
 							<Planets/>
+						</Route>
+						<Route exact path="/vehicles">
+							<Vehicles/>
+						</Route>
+						<Route exact path="/vehicles/:idvehicles">
+							<Vehicles1/>
 						</Route>
 						<Route exact path="/single/:theid">
 							<Single />

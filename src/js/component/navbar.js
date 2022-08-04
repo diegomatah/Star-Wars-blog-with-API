@@ -23,7 +23,7 @@ export const Navbar = () => {
         <img className="planeta" src={planeta}/>
         <button className="button1">Planets</button>
       </Link>
-      <Link to="/demo">
+      <Link to="/vehicles">
         <img className="nave" src={nave}/>
         <button className="button1">Vehicles</button>
       </Link>
