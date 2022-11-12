@@ -9,7 +9,9 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
-
+  const deleteTask = (key) => {
+    actions.removeFavorite(key);
+}
   return (
     <nav className="navbar">
       <Link to="/">
@@ -41,7 +43,9 @@ export const Navbar = () => {
         </button>
         <ul class="dropdown-menu">
           {store.fav?.map((e,i)=>{
-            return <li> {e.name} </li>
+            return <li className="dropdown-item d-flex justify-content-between" > {e.name} <button onClick={() => {
+              deleteTask(i);
+          }}>X</button></li>
           })}
         </ul>
       </div>

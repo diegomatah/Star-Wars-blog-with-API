@@ -26,16 +26,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			setStore({fav:[...store.fav,{name:nombre}]})
 		}
 		else{
-			store.fav?.forEach((e)=>{
-				if(e.name==nombre){
-					console.log("existe")
-				}
-				else{
-					setStore({fav:[...store.fav, {name:nombre}]})
-				}
-			})
+			if(store.fav?.find(e=>e.name==nombre)==undefined)
+          {setStore({fav:[...store.fav, {name:nombre}]})
+      }
 		}
-		setStore({fav:[...store.fav,{name:nombre}]})
       },
 
       getPeople: () => {
@@ -56,6 +50,12 @@ const getState = ({ getStore, getActions, setStore }) => {
           .then((info) => setStore({ vehicles: info.results }))
           .catch((error) => console.log("DANGER DANGER", error));
       },
+
+      removeFavorite: favoriteIndex => {
+        const store = getStore();
+        store.fav.splice(favoriteIndex, 1);
+        setStore({ fav: store.fav });
+},
 
       // Use getActions to call a function within a fuction
       exampleFunction: () => {
